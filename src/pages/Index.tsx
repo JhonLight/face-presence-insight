@@ -37,6 +37,20 @@ const Index = () => {
 
       {/* Main Content */}
       <main className="container mx-auto px-6 py-8">
+        {/* Demo Info */}
+        <div className="text-center py-8 mb-8">
+          <div className="max-w-2xl mx-auto bg-gradient-primary p-8 rounded-2xl text-white">
+            <Camera className="h-12 w-12 mx-auto mb-4 opacity-90" />
+            <h2 className="text-2xl font-bold mb-3">Demonstração Interativa</h2>
+            <p className="text-lg opacity-90 mb-4">
+              Este dashboard exibe dados simulados em tempo real do sistema de reconhecimento facial
+            </p>
+            <p className="text-sm opacity-75">
+              Processamento anonimizado • Conformidade LGPD • Tecnologia Azure Face API
+            </p>
+          </div>
+        </div>
+
         {/* Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <MetricCard
@@ -91,19 +105,6 @@ const Index = () => {
           <FrequencyChart />
         </div>
 
-        {/* Demo Info */}
-        <div className="text-center py-8">
-          <div className="max-w-2xl mx-auto bg-gradient-primary p-8 rounded-2xl text-white">
-            <Camera className="h-12 w-12 mx-auto mb-4 opacity-90" />
-            <h2 className="text-2xl font-bold mb-3">Demonstração Interativa</h2>
-            <p className="text-lg opacity-90 mb-4">
-              Este dashboard exibe dados simulados em tempo real do sistema de reconhecimento facial
-            </p>
-            <p className="text-sm opacity-75">
-              Processamento anonimizado • Conformidade LGPD • Tecnologia Azure Face API
-            </p>
-          </div>
-        </div>
       </main>
     </div>
   );
