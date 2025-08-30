@@ -47,6 +47,15 @@ export function AlertPanel() {
     }
   };
 
+  const getBadgeLabel = (type: string) => {
+    switch (type) {
+      case 'warning': return 'Alerta';
+      case 'success': return 'Sucesso';
+      case 'info': return 'Info';
+      default: return 'Info';
+    }
+  };
+
   return (
     <Card className="p-6 bg-card/50 backdrop-blur-sm border-border/50">
       <div className="flex items-center justify-between mb-6">
@@ -75,7 +84,7 @@ export function AlertPanel() {
               <div className="flex items-center gap-2 mb-1">
                 <h4 className="text-sm font-medium">{alert.title}</h4>
                 <Badge variant={getBadgeVariant(alert.type)} className="text-xs">
-                  {alert.type}
+                  {getBadgeLabel(alert.type)}
                 </Badge>
               </div>
               <p className="text-xs text-muted-foreground mb-2">{alert.description}</p>
