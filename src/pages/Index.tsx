@@ -14,7 +14,7 @@ const Index = () => {
                 <Eye className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold">Visão de presença facialInsight</h1>
+                <h1 className="text-xl font-bold">Visão de presença facial - CFTV</h1>
                 <p className="text-sm text-muted-foreground">Sistema de Análise de Presença</p>
               </div>
             </div>
