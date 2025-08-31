@@ -3,10 +3,8 @@ import { AttendanceChart } from "@/components/AttendanceChart";
 import { AlertPanel } from "@/components/AlertPanel";
 import { FrequencyChart } from "@/components/FrequencyChart";
 import { Users, Eye, UserCheck, TrendingUp, Camera, Shield } from "lucide-react";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border/50 bg-card/30 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
@@ -16,7 +14,7 @@ const Index = () => {
                 <Eye className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold">Face Presence Insight</h1>
+                <h1 className="text-xl font-bold">Visão de presença facialInsight</h1>
                 <p className="text-sm text-muted-foreground">Sistema de Análise de Presença</p>
               </div>
             </div>
@@ -53,41 +51,13 @@ const Index = () => {
 
         {/* Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <MetricCard
-            title="Total Presente"
-            value="148"
-            change={12}
-            trend="up"
-            subtitle="de 150 lugares"
-            icon={<Users className="h-5 w-5" />}
-          />
+          <MetricCard title="Total Presente" value="148" change={12} trend="up" subtitle="de 150 lugares" icon={<Users className="h-5 w-5" />} />
           
-          <MetricCard
-            title="Membros Regulares"
-            value="142"
-            change={8}
-            trend="up"
-            subtitle="frequência ativa"
-            icon={<UserCheck className="h-5 w-5" />}
-          />
+          <MetricCard title="Membros Regulares" value="142" change={8} trend="up" subtitle="frequência ativa" icon={<UserCheck className="h-5 w-5" />} />
           
-          <MetricCard
-            title="Novos Visitantes"
-            value="6"
-            change={25}
-            trend="up"
-            subtitle="rostos não identificados"
-            icon={<TrendingUp className="h-5 w-5" />}
-          />
+          <MetricCard title="Novos Visitantes" value="6" change={25} trend="up" subtitle="rostos não identificados" icon={<TrendingUp className="h-5 w-5" />} />
           
-          <MetricCard
-            title="Taxa de Ocupação"
-            value="98.7%"
-            change={5}
-            trend="up"
-            subtitle="capacidade otimal"
-            icon={<Camera className="h-5 w-5" />}
-          />
+          <MetricCard title="Taxa de Ocupação" value="98.7%" change={5} trend="up" subtitle="capacidade otimal" icon={<Camera className="h-5 w-5" />} />
         </div>
 
         {/* Charts Grid */}
@@ -106,8 +76,6 @@ const Index = () => {
         </div>
 
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
