@@ -38,7 +38,7 @@ const Index = () => {
     <main className="container mx-auto px-6 py-8">
       {/* Demo Info */}
       <div className="text-center py-8 mb-8">
-        <div className="max-w-5xl mx-auto bg-gradient-primary rounded-2xl text-white overflow-hidden relative d-flex flex-col items-center">
+        <div className="max-w-2xl mx-auto bg-gradient-primary rounded-2xl text-white overflow-hidden relative d-flex flex-col items-center">
           {/* <Camera className="h-12 w-12 mx-auto mb-4 opacity-90" />
           <h2 className="text-2xl font-bold mb-3">Demonstração Interativa</h2>
           <p className="text-lg opacity-90 mb-4">
