@@ -2,9 +2,7 @@ import { MetricCard } from "@/components/MetricCard";
 import { AttendanceChart } from "@/components/AttendanceChart";
 import { AlertPanel } from "@/components/AlertPanel";
 import { FrequencyChart } from "@/components/FrequencyChart";
-import { Users, Eye, UserCheck, TrendingUp, Camera, Shield, FileText } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Users, Eye, UserCheck, TrendingUp, Camera, Shield } from "lucide-react";
 
 const Index = () => {
   return (
@@ -23,23 +21,14 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="flex items-center gap-4">
-              <Link to="/relatorio">
-                <Button variant="outline" size="sm" className="gap-2">
-                  <FileText className="h-4 w-4" />
-                  Relatório
-                </Button>
-              </Link>
-              
-              <div className="flex items-center gap-2 text-sm">
-                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-success/10 text-success">
-                  <div className="w-2 h-2 rounded-full bg-success animate-pulse"></div>
-                  <span>Ao Vivo</span>
-                </div>
-                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-muted/30">
-                  <Shield className="h-4 w-4" />
-                  <span>Dados Anonimizados</span>
-                </div>
+            <div className="flex items-center gap-2 text-sm">
+              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-success/10 text-success">
+                <div className="w-2 h-2 rounded-full bg-success animate-pulse"></div>
+                <span>Ao Vivo</span>
+              </div>
+              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-muted/30">
+                <Shield className="h-4 w-4" />
+                <span>Dados Anonimizados</span>
               </div>
             </div>
           </div>
