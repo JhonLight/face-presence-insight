@@ -2,7 +2,9 @@ import { MetricCard } from "@/components/MetricCard";
 import { AttendanceChart } from "@/components/AttendanceChart";
 import { AlertPanel } from "@/components/AlertPanel";
 import { FrequencyChart } from "@/components/FrequencyChart";
-import { Users, Eye, UserCheck, TrendingUp, Camera, Shield } from "lucide-react";
+import { Users, Eye, UserCheck, TrendingUp, Camera, Shield, FileText } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -11,14 +13,23 @@ const Index = () => {
       <header className="border-b border-border/50 bg-card/30 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="p-2 rounded-lg bg-gradient-primary">
-                <Eye className="h-6 w-6 text-white" />
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
+                <div className="p-2 rounded-lg bg-gradient-primary">
+                  <Eye className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold">Face Presence Insight</h1>
+                  <p className="text-sm text-muted-foreground">Sistema de Análise de Presença</p>
+                </div>
               </div>
-              <div>
-                <h1 className="text-xl font-bold">Face Presence Insight</h1>
-                <p className="text-sm text-muted-foreground">Sistema de Análise de Presença</p>
-              </div>
+              
+              <Link to="/relatorio">
+                <Button variant="outline" className="flex items-center gap-2">
+                  <FileText className="h-4 w-4" />
+                  Relatório
+                </Button>
+              </Link>
             </div>
             
             <div className="flex items-center gap-2 text-sm">
