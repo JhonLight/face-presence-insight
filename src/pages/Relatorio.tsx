@@ -116,8 +116,8 @@ const Relatorio = () => {
         item.nome.toLowerCase().includes(busca.toLowerCase()) ||
         item.id.toLowerCase().includes(busca.toLowerCase());
       
-      const matchesLocal = local === "" || item.local === local;
-      const matchesTipo = tipoVisitante === "" || item.tipo === tipoVisitante;
+      const matchesLocal = local === "" || local === "all" || item.local === local;
+      const matchesTipo = tipoVisitante === "" || tipoVisitante === "all" || item.tipo === tipoVisitante;
       
       return matchesBusca && matchesLocal && matchesTipo;
     });
@@ -265,7 +265,7 @@ const Relatorio = () => {
                   <SelectValue placeholder="Todos os locais" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">Todos os locais</SelectItem>
+                  <SelectItem value="all">Todos os locais</SelectItem>
                   <SelectItem value="Igreja Central">Igreja Central</SelectItem>
                   <SelectItem value="Salão">Salão</SelectItem>
                 </SelectContent>
@@ -279,7 +279,7 @@ const Relatorio = () => {
                   <SelectValue placeholder="Todos os tipos" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">Todos os tipos</SelectItem>
+                  <SelectItem value="all">Todos os tipos</SelectItem>
                   <SelectItem value="Regular">Regulares</SelectItem>
                   <SelectItem value="Novo">Novos</SelectItem>
                 </SelectContent>
@@ -293,7 +293,7 @@ const Relatorio = () => {
                   <SelectValue placeholder="Todas as frequências" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">Todas as frequências</SelectItem>
+                  <SelectItem value="all">Todas as frequências</SelectItem>
                   <SelectItem value="muito-regular">Muito regular (mais de 3/mês)</SelectItem>
                   <SelectItem value="regular">Regular (1-3/mês)</SelectItem>
                   <SelectItem value="raramente">Raramente (menos de 1/mês)</SelectItem>
